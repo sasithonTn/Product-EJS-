@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>My List</title>
+</head>
+<body>
+   <div class="box" id="heading">
+      <h1>Product of Today </h1>
+   </div>
+   <div class="box" >
+      <%for (var i = 0 ; i < newListItems.length ; i++) {%>
+         <div class="item">
+            <p><%=newListItems[i]%></p>  
+         </div>
+         
+      <%}%>
+      <form action="/" method="post">
+         <input type="text" name="SearchItem" placeholder="Search Product">
+         <button type="submit">Search</button>
+        </form>
+      </form>
+      <h1><%=product%></h1>
+      <%for (var i = 0 ; i < show.length ; i++) {%>
+         <div class="item">
+            <%if (i==0){%>
+               <p><%=show[0]%></p>
+               <img src=<%=show[0]%> alt="">
+            <%}
+            else{%>
+               <p><%=show[i]%></p>
+            <%}%>
+         </div>
+         
+      <%}%>
+   </div>
+ 
+    
+
+ 
+   
+
+</body>
+</html>
+
